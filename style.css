@@ -81,9 +81,9 @@ header p {
 
 .status-strip {
   display: grid;
-  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
   gap: 16px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 28px auto 20px;
 }
 
@@ -117,6 +117,10 @@ header p {
 
 .status-item:nth-child(2) {
   border-top: 4px solid #f59e0b;
+}
+
+.status-item:nth-child(3) {
+  border-top: 4px solid #7c3aed;
 }
 
 .status-item:last-child {
@@ -166,7 +170,6 @@ header p {
 #filter-cp:checked ~ .dept-filters label[for="filter-cp"],
 #filter-physics:checked ~ .dept-filters label[for="filter-physics"],
 #filter-eee:checked ~ .dept-filters label[for="filter-eee"],
-#filter-webdev:checked ~ .dept-filters label[for="filter-webdev"],
 #availability-all:checked ~ .availability-filters label[for="availability-all"],
 #availability-now:checked ~ .availability-filters label[for="availability-now"],
 #availability-later:checked ~ .availability-filters label[for="availability-later"] {
@@ -179,8 +182,7 @@ header p {
 #filter-english:checked ~ .faculty-grid .faculty-card:not([data-dept="english"]),
 #filter-cp:checked ~ .faculty-grid .faculty-card:not([data-dept="cp"]),
 #filter-physics:checked ~ .faculty-grid .faculty-card:not([data-dept="physics"]),
-#filter-eee:checked ~ .faculty-grid .faculty-card:not([data-dept="eee"]),
-#filter-webdev:checked ~ .faculty-grid .faculty-card:not([data-dept="webdev"]) {
+#filter-eee:checked ~ .faculty-grid .faculty-card:not([data-dept="eee"]) {
   display: none;
 }
 
@@ -235,7 +237,6 @@ header p {
 .faculty-card[data-dept="cp"] .avatar { background: linear-gradient(135deg, #22c55e, #16a34a); }
 .faculty-card[data-dept="physics"] .avatar { background: linear-gradient(135deg, #06b6d4, #3b82f6); }
 .faculty-card[data-dept="eee"] .avatar { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
-.faculty-card[data-dept="webdev"] .avatar { background: linear-gradient(135deg, #ec4899, #db2777); }
 
 /* Status Badges & Links */
 .badge {
@@ -250,7 +251,6 @@ header p {
 .badge.free { background: #dcfce7; color: #166534; }
 .badge.busy { background: #fee2e2; color: #991b1b; }
 .badge.dept { background: var(--blue-soft); color: var(--blue); }
-.badge.unknown { background: #e2e8f0; color: #334155; }
 
 .faculty-card a {
   color: var(--blue);
@@ -349,4 +349,191 @@ summary {
 
 h2 {
   color: var(--navy);
+}
+
+/* Section Topics */
+.section-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.section-card {
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.section-card h3 {
+  margin-bottom: 10px;
+  color: var(--navy);
+}
+
+.topic-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.topic-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #fbfcfa;
+  border: 1px solid #edf1ec;
+  border-radius: 12px;
+}
+
+.topic-item .avatar {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  font-size: 0.7rem;
+}
+
+.topic-item.maths .avatar { background: linear-gradient(135deg, #f97316, #ef4444); }
+.topic-item.eee .avatar { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
+.topic-item.english .avatar { background: linear-gradient(135deg, #f59e0b, #f97316); }
+.topic-item.programming .avatar { background: linear-gradient(135deg, #22c55e, #16a34a); }
+.topic-item.physics .avatar { background: linear-gradient(135deg, #06b6d4, #3b82f6); }
+.topic-item.web-design .avatar { background: linear-gradient(135deg, #7c3aed, #2563eb); }
+
+.topic-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topic-heading a,
+.container > p a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.topic-heading a:hover,
+.container > p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .section-list {
+    grid-template-columns: 1fr;
+  }
+
+  .status-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.subject-badge {
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.topic-item.maths .subject-badge { background: #ffedd5; color: #c2410c; }
+.topic-item.eee .subject-badge { background: #ede9fe; color: #6d28d9; }
+.topic-item.english .subject-badge { background: #fef3c7; color: #b45309; }
+.topic-item.programming .subject-badge { background: #dcfce7; color: #15803d; }
+.topic-item.physics .subject-badge { background: #cffafe; color: #0369a1; }
+.topic-item.web-design .subject-badge { background: #dbeafe; color: #1d4ed8; }
+
+.topic-item p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.topic-item p strong {
+  color: var(--navy);
+}
+
+.request-list {
+  display: grid;
+  gap: 16px;
+  max-width: 900px;
+}
+
+.request-card {
+  padding: 22px 24px;
+  background: var(--card);
+  border: 1px solid #dbe3ef;
+  border-left: 5px solid var(--blue);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.request-card h3 {
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+
+.request-card p {
+  margin: 8px 0;
+}
+
+.request-card strong {
+  color: var(--navy);
+}
+
+.request-faculty {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.request-avatar {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.request-avatar.maths { background: linear-gradient(135deg, #f97316, #ef4444); }
+.request-avatar.eee { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
+.request-avatar.programming { background: linear-gradient(135deg, #22c55e, #16a34a); }
+
+.request-demo-note {
+  margin: 8px 0 20px;
+  color: var(--muted);
+}
+
+.request-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.request-status.submitted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.request-status.on-leave {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.request-status a {
+  color: inherit;
+}
+
+.request-link {
+  display: inline-block;
+  margin-top: 16px;
 }
