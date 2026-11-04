@@ -18,31 +18,36 @@
   <nav class="nav-bar">
     <a href="index.html" class="nav-link active">Live Directory</a>
     <a href="contact.html" class="nav-link">Contact Teachers</a>
+    <a href="classtopics.html" class="nav-link">Class Topics</a>
+    <a href="requests.html" class="nav-link">My Requests</a>
   </nav>
 
   <main class="container">
     <section class="status-strip" aria-label="Quick faculty status">
       <div class="status-item">
-        <span class="status-number">6</span>
+        <span class="status-number">11</span>
         <span>Available now</span>
       </div>
       <div class="status-item">
-        <span class="status-number">5</span>
+        <span class="status-number">6</span>
         <span>Open later</span>
+      </div>
+      <div class="status-item">
+        <span class="status-number">17</span>
+        <span>Teachers listed</span>
       </div>
       <div class="status-item">
         <span class="status-number">6</span>
         <span>Departments</span>
       </div>
     </section>
-
+    
     <input class="filter-input" type="radio" id="filter-all" name="department-filter" checked>
     <input class="filter-input" type="radio" id="filter-maths" name="department-filter">
     <input class="filter-input" type="radio" id="filter-english" name="department-filter">
     <input class="filter-input" type="radio" id="filter-cp" name="department-filter">
     <input class="filter-input" type="radio" id="filter-physics" name="department-filter">
     <input class="filter-input" type="radio" id="filter-eee" name="department-filter">
-    <input class="filter-input" type="radio" id="filter-webdev" name="department-filter">
 
     <input class="filter-input" type="radio" id="availability-all" name="availability-filter" checked>
     <input class="filter-input" type="radio" id="availability-now" name="availability-filter">
@@ -55,7 +60,6 @@
       <label class="filter-btn" for="filter-cp">CP (Coding)</label>
       <label class="filter-btn" for="filter-physics">Physics</label>
       <label class="filter-btn" for="filter-eee">EEE</label>
-      <label class="filter-btn" for="filter-webdev">Web Dev</label>
     </div>
 
     <div class="availability-filters">
@@ -68,17 +72,57 @@
     <!-- Faculty Cards Grid -->
     <div class="faculty-grid">
 
-      <!-- 1. Amey S Deshpandey -->
+      <!-- Dr. Neeraj K. Dhanwani -->
+      <div class="faculty-card available-now" data-dept="maths" id="faculty-neeraj">
+        <div class="card-header">
+          <div class="avatar">NKD</div>
+          <div>
+            <h3>Dr. Neeraj K. Dhanwani</h3>
+            <span class="badge dept">Math-I</span>
+          </div>
+        </div>
+        <span class="badge free">● Available now</span>
+        <p>👥 Queue: 0 Students</p>
+        <details>
+          <summary>View Today's Free Slots</summary>
+          <ul>
+            <li>10:00 AM - 11:30 AM</li>
+            <li>02:00 PM - 03:30 PM</li>
+          </ul>
+        </details>
+        <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
+      </div>
+
+      <!-- Dr. Alok Agarwal -->
+      <div class="faculty-card available-now" data-dept="eee" id="faculty-alok">
+        <div class="card-header">
+          <div class="avatar">AA</div>
+          <div>
+            <h3>Dr. Alok Agarwal</h3>
+            <span class="badge dept">EEE</span>
+          </div>
+        </div>
+        <span class="badge free">● Available now</span>
+        <p>👥 Queue: 1 Student</p>
+        <details>
+          <summary>View Today's Free Slots</summary>
+          <ul>
+            <li>11:00 AM - 01:00 PM</li>
+          </ul>
+        </details>
+        <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
+      </div>
+
+      <!-- Dr. Amey S. Deshpande -->
       <div class="faculty-card available-now" data-dept="maths" id="faculty-amey">
         <div class="card-header">
           <div class="avatar">AD</div>
           <div>
-            <h3>Amey S Deshpandey</h3>
-            <span class="badge dept">Maths</span>
+            <h3>Dr. Amey S. Deshpande</h3>
+            <span class="badge dept">Math-I</span>
           </div>
         </div>
         <span class="badge free">● Available now</span>
-        <p>📍 Office: Room 101, Science Block</p>
         <p>👥 Queue: 1 Student</p>
         <details>
           <summary>View Today's Free Slots</summary>
@@ -90,17 +134,16 @@
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 2. Ambalika Guha -->
+      <!-- Ambalika Guha -->
       <div class="faculty-card available-later" data-dept="english" id="faculty-ambalika">
         <div class="card-header">
           <div class="avatar">AG</div>
           <div>
-            <h3>Ambalika Guha</h3>
+            <h3>Dr. Ambalika Guha</h3>
             <span class="badge dept">English</span>
           </div>
         </div>
         <span class="badge busy">● In class · Open later today</span>
-        <p>📍 Office: Room 204, Humanities</p>
         <p>👥 Queue: 0 Students</p>
         <details>
           <summary>View Today's Free Slots</summary>
@@ -111,17 +154,16 @@
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 3. Bijoy Chandra -->
+      <!-- Bijoy Chandra -->
       <div class="faculty-card available-now" data-dept="cp" id="faculty-bijoy">
         <div class="card-header">
           <div class="avatar">BC</div>
           <div>
-            <h3>Bijoy Chandra</h3>
+            <h3>Dr. Bijoy Chand Chatterjee</h3>
             <span class="badge dept">CP (Coding)</span>
           </div>
         </div>
         <span class="badge free">● Available now</span>
-        <p>📍 Office: Lab 3, Tech Block</p>
         <p>👥 Queue: 3 Students</p>
         <details>
           <summary>View Today's Free Slots</summary>
@@ -132,17 +174,16 @@
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 4. Preeti Bhandari -->
+      <!-- Preeti Bhandari -->
       <div class="faculty-card available-later" data-dept="physics" id="faculty-preeti">
         <div class="card-header">
           <div class="avatar">PB</div>
           <div>
-            <h3>Preeti Bhandari</h3>
+            <h3>Dr. Preeti Bhandari</h3>
             <span class="badge dept">Physics</span>
           </div>
         </div>
         <span class="badge busy">● Busy / Meeting · Open later today</span>
-        <p>📍 Office: Room 302, Physics Lab</p>
         <p>👥 Queue: 2 Students</p>
         <details>
           <summary>View Today's Free Slots</summary>
@@ -153,17 +194,16 @@
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 5. Chandra B Kumar -->
+      <!-- Chandra B Kumar -->
       <div class="faculty-card available-now" data-dept="eee" id="faculty-chandra">
         <div class="card-header">
           <div class="avatar">CK</div>
           <div>
-            <h3>Chandra B Kumar</h3>
+            <h3>Dr. Chandra B. Kumar</h3>
             <span class="badge dept">EEE</span>
           </div>
         </div>
         <span class="badge free">● Available now</span>
-        <p>📍 Office: Room 108, Electrical Wing</p>
         <p>👥 Queue: 0 Students</p>
         <details>
           <summary>View Today's Free Slots</summary>
@@ -174,148 +214,161 @@
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 6. Payal Mukharjee -->
+      <!-- Dr. Payel Mukherjee -->
       <div class="faculty-card available-now" data-dept="english" id="faculty-payal">
         <div class="card-header">
           <div class="avatar">PM</div>
           <div>
-            <h3>Payal Mukharjee</h3>
+            <h3>Dr. Payel Mukherjee</h3>
             <span class="badge dept">English</span>
           </div>
         </div>
         <span class="badge free">● Available now</span>
-        <p>📍 Office: Room 206, Humanities Block</p>
         <p>👥 Queue: 1 Student</p>
         <details>
           <summary>View Today's Free Slots</summary>
           <ul>
-            <li>02:00 PM - 04:00 PM (Open)</li>
+            <li>02:00 PM - 04:00 PM</li>
           </ul>
         </details>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 7. Sandeep Kumar -->
+      <!-- Sandeep Kumar -->
       <div class="faculty-card available-later" data-dept="cp" id="faculty-sandeep">
         <div class="card-header">
           <div class="avatar">SK</div>
           <div>
-            <h3>Sandeep Kumar</h3>
+            <h3>Dr. Sandeep Kumar</h3>
             <span class="badge dept">CP (Coding)</span>
           </div>
         </div>
         <span class="badge busy">● In class · Open later today</span>
-        <p>📍 Office: Lab 1, CS Block</p>
         <p>👥 Queue: 0 Students</p>
         <details>
           <summary>View Today's Free Slots</summary>
           <ul>
-            <li>03:30 PM - 05:00 PM (Open)</li>
+            <li>03:30 PM - 05:00 PM</li>
           </ul>
         </details>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 8. Sahil -->
+      <!-- Sahil -->
       <div class="faculty-card available-now" data-dept="maths" id="faculty-sahil">
         <div class="card-header">
           <div class="avatar">S</div>
           <div>
-            <h3>Sahil</h3>
+            <h3>Dr. Sahil</h3>
             <span class="badge dept">Maths</span>
           </div>
         </div>
         <span class="badge free">● Available now</span>
-        <p>📍 Office: Room 103, Science Block</p>
         <p>👥 Queue: 2 Students</p>
         <details>
           <summary>View Today's Free Slots</summary>
           <ul>
-            <li>11:30 AM - 01:00 PM (Open)</li>
+            <li>11:30 AM - 01:00 PM</li>
           </ul>
         </details>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 9. Ankit Jain -->
+      <!-- Ankit Jain -->
       <div class="faculty-card available-now" data-dept="cp" id="faculty-ankit">
         <div class="card-header">
           <div class="avatar">AJ</div>
           <div>
-            <h3>Ankit Jain</h3>
+            <h3>Dr. Ankit Jain</h3>
             <span class="badge dept">CP (Coding)</span>
           </div>
         </div>
         <span class="badge free">● Available now</span>
-        <p>📍 Office: Room 402, IT Wing</p>
         <p>👥 Queue: 0 Students</p>
         <details>
           <summary>View Today's Free Slots</summary>
           <ul>
-            <li>01:00 PM - 03:00 PM (Open)</li>
+            <li>01:00 PM - 03:00 PM</li>
           </ul>
         </details>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 10. Anand Upadhyay -->
-      <div class="faculty-card" data-dept="webdev" id="faculty-anand">
-        <div class="card-header">
-          <div class="avatar">AU</div>
-          <div>
-            <h3>Anand Upadhyay</h3>
-            <span class="badge dept">Web Dev</span>
-          </div>
-        </div>
-        <span class="badge unknown">Availability not listed</span>
-        <p>📍 Office: Web Development Lab</p>
-        <p>👥 Queue: Not listed</p>
-        <details>
-          <summary>View Today's Free Slots</summary>
-          <p>Availability has not been provided.</p>
-        </details>
-        <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
-      </div>
-
-      <!-- 11. Girija Shankar -->
+      <!-- Girija Shankar -->
       <div class="faculty-card available-later" data-dept="physics" id="faculty-girija">
         <div class="card-header">
           <div class="avatar">GS</div>
           <div>
-            <h3>Girija Shankar</h3>
+            <h3>Dr. Girija Shankar</h3>
             <span class="badge dept">Physics</span>
           </div>
         </div>
         <span class="badge busy">● Busy / In lab · Open later today</span>
-        <p>📍 Office: Physics Optics Lab</p>
         <p>👥 Queue: 1 Student</p>
         <details>
           <summary>View Today's Free Slots</summary>
           <ul>
-            <li>02:30 PM - 04:00 PM (Open)</li>
+            <li>02:30 PM - 04:00 PM</li>
           </ul>
         </details>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <!-- 12. Tamalika Chaira -->
+      <!-- Tamalika Chaira -->
       <div class="faculty-card available-now" data-dept="eee" id="faculty-tamalika">
         <div class="card-header">
           <div class="avatar">TC</div>
           <div>
-            <h3>Tamalika Chaira</h3>
+            <h3>Dr. Tamalika Chaira</h3>
             <span class="badge dept">EEE</span>
           </div>
         </div>
         <span class="badge free">● Available now</span>
-        <p>📍 Office: Room 112, EEE Block</p>
         <p>👥 Queue: 1 Student</p>
         <details>
           <summary>View Today's Free Slots</summary>
           <ul>
-            <li>10:30 AM - 12:30 PM (Open)</li>
+            <li>10:30 AM - 12:30 PM</li>
           </ul>
         </details>
+        <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
+      </div>
+
+      <div class="faculty-card available-later" data-dept="physics" id="faculty-ankita">
+        <div class="card-header">
+          <div class="avatar">AG</div>
+          <div><h3>Dr. Ankita Gaur</h3><span class="badge dept">Physics</span></div>
+        </div>
+        <span class="badge busy">● In class · Open later today</span>
+        <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
+      </div>
+
+      <div class="faculty-card available-now" data-dept="cp" id="faculty-shashank">
+        <div class="card-header">
+          <div class="avatar">SSS</div>
+          <div><h3>Dr. Shashank Sheshar Singh</h3><span class="badge dept">CP (Coding)</span></div>
+        </div>
+        <span class="badge free">● Available now</span>
+        <p>👥 Queue: 0 Students</p>
+        <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
+      </div>
+
+      <div class="faculty-card available-later" data-dept="english" id="faculty-swati">
+        <div class="card-header">
+          <div class="avatar">SC</div>
+          <div><h3>Dr. Swati Chandra</h3><span class="badge dept">English</span></div>
+        </div>
+        <span class="badge busy">● In class · Open later today</span>
+        <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
+      </div>
+
+      <div class="faculty-card available-now" data-dept="cp" id="faculty-aanand">
+        <div class="card-header">
+          <div class="avatar">AU</div>
+          <div><h3>Mr. Aanand Upadhayay</h3><span class="badge dept">Web Design</span></div>
+        </div>
+        <span class="badge free">● Available now</span>
+        <p>👥 Queue: 0 Students</p>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
@@ -329,29 +382,33 @@
         <label for="faculty-select">Faculty</label>
         <select id="faculty-select" required>
           <option value="" selected disabled>Select a faculty member</option>
-          <option>Amey S Deshpandey</option>
-          <option>Ambalika Guha</option>
-          <option>Anand Upadhyay</option>
-          <option>Bijoy Chandra</option>
-          <option>Preeti Bhandari</option>
-          <option>Chandra B Kumar</option>
-          <option>Payal Mukharjee</option>
-          <option>Sandeep Kumar</option>
-          <option>Sahil</option>
-          <option>Ankit Jain</option>
-          <option>Girija Shankar</option>
-          <option>Tamalika Chaira</option>
-	      <option>RITWIK TEST112233 </option>
+          <option>Dr. Neeraj K. Dhanwani</option>
+          <option>Dr. Alok Agarwal</option>
+          <option>Dr. Amey S. Deshpande</option>
+          <option>Dr. Ambalika Guha</option>
+          <option>Dr. Ankit Jain</option>
+          <option>Dr. Ankita Gaur</option>
+          <option>Dr. Bijoy Chand Chatterjee</option>
+          <option>Dr. Chandra B. Kumar</option>
+          <option>Dr. Girija Shankar</option>
+          <option>Dr. Payel Mukherjee</option>
+          <option>Dr. Preeti Bhandari</option>
+          <option>Dr. Sahil</option>
+          <option>Dr. Sandeep Kumar</option>
+          <option>Dr. Shashank Sheshar Singh</option>
+          <option>Dr. Swati Chandra</option>
+          <option>Dr. Tamalika Chaira</option>
+          <option>Mr. Aanand Upadhayay</option>
         </select>
 
         <label for="student-name">Your Name</label>
-        <input type="text" id="student-name" placeholder="e.g. Ritwik " required>
+        <input type="text" id="student-name" placeholder="e.g. Ritwik" required>
 
         <label for="roll-no">Roll Number</label>
         <input type="text" id="roll-no" placeholder="e.g. 2026-CSE-023" required>
 
         <label for="doubt-summary">Doubt Topic / Summary</label>
-        <textarea id="doubt-summary" rows="3" placeholder="e.g. Linear Algebra Optimisation-Question on Basis" required></textarea>
+        <textarea id="doubt-summary" rows="3" placeholder="e.g. How does Simplex method work?" required></textarea>
 
         <button class="btn-primary" type="submit">Submit Doubt</button>
       </form>
