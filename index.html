@@ -16,10 +16,11 @@
 
   <!-- NAVIGATION BAR -->
   <nav class="nav-bar">
-    <a href="index.html" class="nav-link active">Live Directory</a>
+    <a href="index.html" class="nav-link active" aria-current="page">Live Directory</a>
     <a href="contact.html" class="nav-link">Contact Teachers</a>
     <a href="classtopics.html" class="nav-link">Class Topics</a>
     <a href="requests.html" class="nav-link">My Requests</a>
+    <a href="faculty.html" class="nav-link">Faculty View</a>
   </nav>
 
   <main class="container">
@@ -69,8 +70,20 @@
       <label class="filter-btn" for="availability-later">Open later today</label>
     </div>
 
+    <div class="faculty-search" data-search-target="#directory-faculty-grid">
+      <label for="faculty-search">Search faculty</label>
+      <input
+        type="search"
+        id="faculty-search"
+        class="faculty-search-input"
+        placeholder="Search by name, department, or status"
+        aria-describedby="faculty-search-status"
+      >
+      <p class="faculty-search-status" id="faculty-search-status" role="status" aria-live="polite"></p>
+    </div>
+
     <!-- Faculty Cards Grid -->
-    <div class="faculty-grid">
+    <div class="faculty-grid" id="directory-faculty-grid">
 
       <!-- Dr. Neeraj K. Dhanwani -->
       <div class="faculty-card available-now" data-dept="maths" id="faculty-neeraj">
@@ -378,7 +391,7 @@
     <section class="doubt-form-panel" id="doubt-form">
       <h2>Submit Doubt Request</h2>
       
-      <form class="request-fields" action="index.html#demo-status" method="get">
+      <form class="request-fields" id="doubt-request-form">
         <label for="faculty-select">Faculty</label>
         <select id="faculty-select" required>
           <option value="" selected disabled>Select a faculty member</option>
@@ -412,9 +425,28 @@
 
         <button class="btn-primary" type="submit">Submit Doubt</button>
       </form>
+      <p class="form-feedback" id="request-feedback" role="status" aria-live="polite"></p>
+      <a class="btn-primary request-link" href="requests.html">View My Requests</a>
     </section>
 
   </main>
 
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a class="footer-brand" href="index.html">ProfLine</a>
+      <p>Helping students connect with faculty.</p>
+      <p class="footer-credit">Built by Ritwik · Having a problem? <a href="mailto:19.ritwik@gmail.com">Contact the administrator</a></p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Directory</a>
+        <a href="classtopics.html">Class Topics</a>
+        <a href="contact.html">Contact</a>
+        <a href="requests.html">My Requests</a>
+        <a href="faculty.html">Faculty View</a>
+      </nav>
+      <p class="footer-copyright">© 2026 ProfLine. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

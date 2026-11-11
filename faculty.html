@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProfLine - Faculty View</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav-bar" aria-label="Main navigation">
+    <a href="index.html" class="nav-link">Live Directory</a>
+    <a href="contact.html" class="nav-link">Contact Teachers</a>
+    <a href="classtopics.html" class="nav-link">Class Topics</a>
+    <a href="requests.html" class="nav-link">My Requests</a>
+    <a href="faculty.html" class="nav-link active" aria-current="page">Faculty View</a>
+  </nav>
+
+  <main class="container faculty-workspace">
+    <section aria-labelledby="faculty-dashboard-title">
+      <div class="faculty-workspace-heading">
+        <div>
+          <p class="faculty-eyebrow">FACULTY WORKSPACE</p>
+          <h1 id="faculty-dashboard-title">Student request inbox</h1>
+          <p class="faculty-dashboard-intro">Review the doubts students have sent through ProfLine.</p>
+        </div>
+        <a class="faculty-action-link" href="index.html#doubt-form">Open student request form</a>
+      </div>
+
+      <div class="faculty-summary">
+        <article class="faculty-summary-card">
+          <span class="faculty-summary-label">Requests received</span>
+          <strong id="faculty-request-count">0</strong>
+          <span>Saved on this browser</span>
+        </article>
+        <aside class="faculty-storage-note">
+          <strong>About these requests</strong>
+          <p>Update a request’s status or reply to a student below. Requests are saved in this browser and are not shared across devices.</p>
+        </aside>
+      </div>
+
+      <section class="faculty-inbox" aria-labelledby="faculty-inbox-title">
+        <div class="faculty-inbox-heading">
+          <div>
+            <h2 id="faculty-inbox-title">Recent submissions</h2>
+            <p>Newest requests are shown first.</p>
+          </div>
+          <span class="faculty-inbox-tag">INBOX</span>
+        </div>
+        <div class="faculty-request-list" id="faculty-request-list" aria-live="polite"></div>
+        <div class="faculty-empty-state" id="faculty-empty-state">
+          <span class="faculty-empty-icon" aria-hidden="true">—</span>
+          <h3>No student requests yet</h3>
+          <p>When a student submits a doubt from the directory, it will show up here.</p>
+          <a href="index.html#doubt-form">Go to the request form</a>
+        </div>
+        <p class="form-feedback" id="faculty-feedback" role="status"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a class="footer-brand" href="index.html">ProfLine</a>
+      <p>Helping students connect with faculty.</p>
+      <p class="footer-credit">Built by Ritwik · Having a problem? <a href="mailto:19.ritwik@gmail.com">Contact the administrator</a></p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Directory</a>
+        <a href="classtopics.html">Class Topics</a>
+        <a href="contact.html">Contact</a>
+        <a href="requests.html">My Requests</a>
+        <a href="faculty.html">Faculty View</a>
+      </nav>
+      <p class="footer-copyright">© 2026 ProfLine. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

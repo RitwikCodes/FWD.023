@@ -17,38 +17,36 @@
     <a href="contact.html" class="nav-link">Contact Teachers</a>
     <a href="classtopics.html" class="nav-link">Class Topics</a>
     <a href="requests.html" class="nav-link active" aria-current="page">My Requests</a>
+    <a href="faculty.html" class="nav-link">Faculty View</a>
   </nav>
 
   <main class="container">
     <h2>My Requests</h2>
     
-    <section class="request-list" aria-label="Doubt requests">
-      <article class="request-card">
-        <h3>My Doubt Request</h3>
-        <p class="request-faculty"><strong>Faculty:</strong><span class="request-avatar maths">NKD</span>Dr. Neeraj K. Dhanwani (Math-I, Section D)</p>
-        <p><strong>Doubt:</strong> Could you explain how to choose the starting values for the Big M method?</p>
-        <p><strong>Submitted:</strong> 3 November 2026</p>
-        <p><span class="request-status submitted">Submitted</span></p>
-      </article>
+    <p class="request-storage-note">Track each request’s status and read faculty replies here. Requests are saved in this browser.</p>
+    <section class="request-list" id="saved-request-list" aria-label="Your doubt requests"></section>
+    <p class="request-storage-note" id="saved-request-empty" role="status">You have not submitted any requests yet.</p>
 
-      <article class="request-card">
-        <h3>My Doubt Request</h3>
-        <p class="request-faculty"><strong>Faculty:</strong><span class="request-avatar eee">AA</span>Dr. Alok Agarwal (EEE, Section D)</p>
-        <p><strong>Doubt:</strong> How does a BJT work as a switch?</p>
-        <p><strong>Submitted:</strong> 2 November 2026</p>
-        <p><span class="request-status submitted">Submitted</span></p>
-      </article>
-
-      <article class="request-card">
-        <h3>My Doubt Request</h3>
-        <p class="request-faculty"><strong>Faculty:</strong><span class="request-avatar programming">SSS</span>Dr. Shashank Sheshar Singh (Computer Programming, Section D)</p>
-        <p><strong>Doubt:</strong> How do pointers store and access a variable's address in C?</p>
-        <p><strong>Submitted:</strong> 4 November 2026</p>
-        <p><span class="request-status on-leave">On leave — please ask <a href="contact.html">another teacher</a>.</span></p>
-      </article>
-    </section>
-
-    <a class="btn-primary request-link" href="contact.html">Browse Faculty</a>
+    <p class="form-feedback" id="requests-feedback" role="status" aria-live="polite"></p>
+    <a class="btn-primary request-link" href="index.html#doubt-form">Submit a Doubt</a>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a class="footer-brand" href="index.html">ProfLine</a>
+      <p>Helping students connect with faculty.</p>
+      <p class="footer-credit">Built by Ritwik · Having a problem? <a href="mailto:19.ritwik@gmail.com">Contact the administrator</a></p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Directory</a>
+        <a href="classtopics.html">Class Topics</a>
+        <a href="contact.html">Contact</a>
+        <a href="requests.html">My Requests</a>
+        <a href="faculty.html">Faculty View</a>
+      </nav>
+      <p class="footer-copyright">© 2026 ProfLine. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

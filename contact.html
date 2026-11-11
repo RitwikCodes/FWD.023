@@ -14,15 +14,28 @@
 
   <nav class="nav-bar">
     <a href="index.html" class="nav-link">Live Directory</a>
-    <a href="contact.html" class="nav-link active">Contact Teachers</a>
+    <a href="contact.html" class="nav-link active" aria-current="page">Contact Teachers</a>
     <a href="classtopics.html" class="nav-link">Class Topics</a>
     <a href="requests.html" class="nav-link">My Requests</a>
+    <a href="faculty.html" class="nav-link">Faculty View</a>
   </nav>
 
   <main class="container">
     <h2>Contact Faculty</h2>
 
-    <section class="faculty-grid">
+    <div class="faculty-search" data-search-target="#contact-faculty-grid">
+      <label for="contact-faculty-search">Find a teacher</label>
+      <input
+        type="search"
+        id="contact-faculty-search"
+        class="faculty-search-input"
+        placeholder="Search by teacher name, department, or email"
+        aria-describedby="contact-faculty-search-status"
+      >
+      <p class="faculty-search-status" id="contact-faculty-search-status" role="status" aria-live="polite"></p>
+    </div>
+
+    <section class="faculty-grid" id="contact-faculty-grid">
 
       <article class="faculty-card" data-dept="maths" id="teacher-neeraj">
         <div class="card-header">
@@ -226,5 +239,22 @@
 
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a class="footer-brand" href="index.html">ProfLine</a>
+      <p>Helping students connect with faculty.</p>
+      <p class="footer-credit">Built by Ritwik · Having a problem? <a href="mailto:19.ritwik@gmail.com">Contact the administrator</a></p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Directory</a>
+        <a href="classtopics.html">Class Topics</a>
+        <a href="contact.html">Contact</a>
+        <a href="requests.html">My Requests</a>
+        <a href="faculty.html">Faculty View</a>
+      </nav>
+      <p class="footer-copyright">© 2026 ProfLine. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
