@@ -4,7 +4,7 @@
 
 Instead of waiting outside offices or guessing whether a professor is available, students can view real-time status updates, active lecture topics, contact info, and submit doubt requests directly.
 
-**WEBSITE LINK - https://profline.gt.tc/**
+WEBSITE LINK - https://ritwikcodes.github.io/FWD.023/
 
 ---
 
