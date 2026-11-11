@@ -4,14 +4,14 @@
 
 Instead of waiting outside offices or guessing whether a professor is available, students can view real-time status updates, active lecture topics, contact info, and submit doubt requests directly.
 
-WEBSITE LINK - https://ritwikcodes.github.io/FWD.023/
+**Website:** https://ritwikcodes.github.io/FWD.023/
 
 ---
 
 ## ✨ Features
 
 * **🔴 Live Availability Directory (`index.html`):** Real-time tracking of faculty members with filter controls by department (Maths, English, CP, Physics, EEE) and instant availability status (*Available now* vs. *Open later*).
-* **📅 Ongoing Classes & Missed Lecture Topics (`schedule.html` / `classtopics.html`):** Keeps absent or catching-up students updated on what exact topics were covered in class during each time slot, with direct links to clear doubts.
+* **📅 Ongoing Classes & Missed Lecture Topics (`classtopics.html`):** Keeps absent or catching-up students updated on what exact topics were covered in class during each time slot, with direct links to clear doubts.
 * **📬 Direct Faculty Contact Directory (`contact.html`):** Complete list of faculty offices, departmental tags, and direct `@teachers.sao.ac.in` institutional email links.
 * **✍️ Interactive Doubt Request System:** Integrated inline queue form for students to submit specific doubt summaries alongside their Name and Roll Number.
 * **📱 Fully Responsive Design:** Clean CSS styling optimized for both desktop and mobile viewing.
@@ -21,10 +21,12 @@ WEBSITE LINK - https://ritwikcodes.github.io/FWD.023/
 ## 📁 Repository Structure
 
 ```text
-ProfLine/
+FWD.023/
 ├── index.html        # Main landing page & live faculty directory with filtering
+├── classtopics.html  # Ongoing classes and missed lecture topics
 ├── contact.html      # Faculty contact directory (emails & office room numbers)
-├── schedule.html     # Class schedule & active lecture topics tracker
+├── faculty.html      # Faculty view
 ├── requests.html     # Doubt request form interface
+├── script.js         # Search and page interactions
 ├── style.css         # Main application stylesheet
 └── README.md         # Project documentation
