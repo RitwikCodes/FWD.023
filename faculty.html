@@ -7,24 +7,83 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav-bar" aria-label="Main navigation">
-    <a href="index.html" class="nav-link">Live Directory</a>
-    <a href="contact.html" class="nav-link">Contact Teachers</a>
-    <a href="classtopics.html" class="nav-link">Class Topics</a>
-    <a href="requests.html" class="nav-link">My Requests</a>
-    <a href="faculty.html" class="nav-link active" aria-current="page">Faculty View</a>
-  </nav>
+  <header class="hero-header">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <a class="brand-mark" href="index.html">ProfLine</a>
+      <button class="nav-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="index.html" class="nav-link">Live Directory</a>
+        <a href="contact.html" class="nav-link">Contact Teachers</a>
+        <a href="classtopics.html" class="nav-link">Class Topics</a>
+        <a href="requests.html" class="nav-link">My Requests</a>
+        <a href="faculty.html" class="nav-link active" aria-current="page">Faculty View</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle icon-theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20.985 12.486A9 9 0 1 1 11.514 3.015a7 7 0 0 0 9.471 9.471Z" />
+          </svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+          </svg>
+        </button>
+        <a class="login-button" href="login.html">Login</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <div class="live-badge">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span>Live Campus Queue • Real-Time Availability</span>
+      </div>
+      <h1 class="hero-title">Faculty support, without the wait.</h1>
+      <p>Review student doubts sent through ProfLine.</p>
+    </div>
+  </header>
 
   <main class="container faculty-workspace">
     <section aria-labelledby="faculty-dashboard-title">
       <div class="faculty-workspace-heading">
         <div>
           <p class="faculty-eyebrow">FACULTY WORKSPACE</p>
-          <h1 id="faculty-dashboard-title">Student request inbox</h1>
+          <h2 id="faculty-dashboard-title">Student request inbox</h2>
           <p class="faculty-dashboard-intro">Review the doubts students have sent through ProfLine.</p>
         </div>
         <a class="faculty-action-link" href="index.html#doubt-form">Open student request form</a>
       </div>
+
+      <section class="faculty-availability-panel" aria-labelledby="faculty-availability-title">
+        <div class="faculty-inbox-heading">
+          <div>
+            <h2 id="faculty-availability-title">Update your availability</h2>
+            <p>Choose your name and let students know what you are doing.</p>
+          </div>
+        </div>
+        <div class="faculty-availability-controls">
+          <label for="faculty-availability-teacher">
+            Faculty member
+            <select id="faculty-availability-teacher">
+              <option value="">Select your name</option>
+            </select>
+          </label>
+          <label for="faculty-availability-status">
+            Current status
+            <select id="faculty-availability-status" disabled>
+              <option value="">Choose your name first</option>
+            </select>
+          </label>
+          <button class="faculty-request-save" id="save-faculty-availability" type="button" disabled>
+            Save availability
+          </button>
+        </div>
+        <p class="faculty-availability-note">
+          Changes appear in directory tabs in this browser. This page does not verify faculty accounts, and sharing status with students on other devices requires a secure shared backend.
+        </p>
+      </section>
 
       <div class="faculty-summary">
         <article class="faculty-summary-card">
@@ -53,7 +112,6 @@
           <p>When a student submits a doubt from the directory, it will show up here.</p>
           <a href="index.html#doubt-form">Go to the request form</a>
         </div>
-        <p class="form-feedback" id="faculty-feedback" role="status"></p>
       </section>
     </section>
   </main>

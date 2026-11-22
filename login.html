@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProfLine - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <main class="login-screen">
+    <button
+      class="theme-toggle icon-theme-toggle"
+      type="button"
+      aria-label="Toggle dark mode"
+      aria-pressed="false"
+    >
+      <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M20.985 12.486A9 9 0 1 1 11.514 3.015a7 7 0 0 0 9.471 9.471Z" />
+      </svg>
+      <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+      </svg>
+    </button>
+    <section class="login-panel" aria-labelledby="login-heading">
+      <header class="login-card-header">
+        <h1 id="login-heading">Login</h1>
+        <p>Access your ProfLine student or faculty portal</p>
+        <div class="auth-switch" role="group" aria-label="Sign in or sign up">
+          <a class="auth-option active" href="login.html" aria-current="page">Sign In</a>
+          <a class="auth-option" href="signup.html">Sign Up</a>
+        </div>
+      </header>
+
+      <form class="login-form" action="login.html" method="get">
+        <label for="login-id">ID</label>
+        <input id="login-id" type="text" autocomplete="username" placeholder="Enter your ID">
+
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" autocomplete="current-password" placeholder="Enter your password">
+
+        <button class="btn-primary" type="submit">Sign In</button>
+        <a class="login-back-link" href="index.html">← Back to Live Directory</a>
+      </form>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

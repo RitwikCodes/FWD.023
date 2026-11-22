@@ -26,9 +26,6 @@ It also provides class-topic and contact directories, plus a faculty page for re
 - **Login and signup pages:** These pages provide the visual layout for sign-in and account creation.  
   They are placeholders only; there is no account system or authentication.
 
-## Run locally
-
-Open `index.html` in a browser, or open the project folder in VS Code and run it with a local web server such as Live Server.
 
 ## Current limitations
 

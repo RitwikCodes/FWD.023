@@ -7,18 +7,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>ProfLine</h1>
-    <p>Keep track of your questions and follow up on class topics.</p>
+  <header class="hero-header">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <a class="brand-mark" href="index.html">ProfLine</a>
+      <button class="nav-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="index.html" class="nav-link">Live Directory</a>
+        <a href="contact.html" class="nav-link">Contact Teachers</a>
+        <a href="classtopics.html" class="nav-link">Class Topics</a>
+        <a href="requests.html" class="nav-link active" aria-current="page">My Requests</a>
+        <a href="faculty.html" class="nav-link">Faculty View</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle icon-theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20.985 12.486A9 9 0 1 1 11.514 3.015a7 7 0 0 0 9.471 9.471Z" />
+          </svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+          </svg>
+        </button>
+        <a class="login-button" href="login.html">Login</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <div class="live-badge">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span>Live Campus Queue • Real-Time Availability</span>
+      </div>
+      <h1 class="hero-title">Faculty support, without the wait.</h1>
+      <p>Keep track of your questions and follow up on class topics.</p>
+    </div>
   </header>
-
-  <nav class="nav-bar">
-    <a href="index.html" class="nav-link">Live Directory</a>
-    <a href="contact.html" class="nav-link">Contact Teachers</a>
-    <a href="classtopics.html" class="nav-link">Class Topics</a>
-    <a href="requests.html" class="nav-link active" aria-current="page">My Requests</a>
-    <a href="faculty.html" class="nav-link">Faculty View</a>
-  </nav>
 
   <main class="container">
     <h2>My Requests</h2>
@@ -27,7 +52,6 @@
     <section class="request-list" id="saved-request-list" aria-label="Your doubt requests"></section>
     <p class="request-storage-note" id="saved-request-empty" role="status">You have not submitted any requests yet.</p>
 
-    <p class="form-feedback" id="requests-feedback" role="status" aria-live="polite"></p>
     <a class="btn-primary request-link" href="index.html#doubt-form">Submit a Doubt</a>
   </main>
 
