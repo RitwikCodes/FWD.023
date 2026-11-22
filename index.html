@@ -8,71 +8,47 @@
 </head>
 <body>
 
-  <header class="hero-header">
-    <nav class="nav-bar" aria-label="Main navigation">
-      <a class="brand-mark" href="index.html">ProfLine</a>
-      <button class="nav-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-links" id="primary-navigation">
-        <a href="index.html" class="nav-link active" aria-current="page">Live Directory</a>
-        <a href="contact.html" class="nav-link">Contact Teachers</a>
-        <a href="classtopics.html" class="nav-link">Class Topics</a>
-        <a href="requests.html" class="nav-link">My Requests</a>
-        <a href="faculty.html" class="nav-link">Faculty View</a>
-      </div>
-      <div class="nav-actions">
-        <button class="theme-toggle icon-theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20.985 12.486A9 9 0 1 1 11.514 3.015a7 7 0 0 0 9.471 9.471Z" />
-          </svg>
-          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
-          </svg>
-        </button>
-        <a class="login-button" href="login.html">Login</a>
-      </div>
-    </nav>
-    <div class="hero-content">
-      <div class="live-badge">
-        <span class="live-dot" aria-hidden="true"></span>
-        <span>Live Campus Queue • Real-Time Availability</span>
-      </div>
-      <h1 class="hero-title">Faculty support, without the wait.</h1>
-      <p>Skip the waiting line. Check faculty availability in real time.</p>
-    </div>
+  <!-- HEADER -->
+  <header>
+    <h1>ProfLine</h1>
+    <p>Skip the waiting line. Check faculty availability in real time.</p>
   </header>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-link active" aria-current="page">Live Directory</a>
+    <a href="contact.html" class="nav-link">Contact Teachers</a>
+    <a href="classtopics.html" class="nav-link">Class Topics</a>
+    <a href="requests.html" class="nav-link">My Requests</a>
+    <a href="faculty.html" class="nav-link">Faculty View</a>
+  </nav>
 
   <main class="container">
     <section class="status-strip" aria-label="Quick faculty status">
-      <button class="status-item" type="button" id="show-all-faculty">
-        <span class="status-number">17</span>
-        <span>Faculty listed</span>
-      </button>
-      <button class="status-item" type="button" id="show-available-now">
-        <span class="status-number" id="available-now-count">11</span>
+      <div class="status-item">
+        <span class="status-number">11</span>
         <span>Available now</span>
-      </button>
-      <button class="status-item" type="button" id="show-open-later">
-        <span class="status-number" id="available-later-count">6</span>
+      </div>
+      <div class="status-item">
+        <span class="status-number">6</span>
         <span>Open later</span>
-      </button>
-      <button class="status-item" type="button" id="show-all-departments">
+      </div>
+      <div class="status-item">
+        <span class="status-number">17</span>
+        <span>Teachers listed</span>
+      </div>
+      <div class="status-item">
         <span class="status-number">6</span>
         <span>Departments</span>
-      </button>
+      </div>
     </section>
-
+    
     <input class="filter-input" type="radio" id="filter-all" name="department-filter" checked>
     <input class="filter-input" type="radio" id="filter-maths" name="department-filter">
     <input class="filter-input" type="radio" id="filter-english" name="department-filter">
     <input class="filter-input" type="radio" id="filter-cp" name="department-filter">
     <input class="filter-input" type="radio" id="filter-physics" name="department-filter">
     <input class="filter-input" type="radio" id="filter-eee" name="department-filter">
-    <input class="filter-input" type="radio" id="filter-web-design" name="department-filter">
 
     <input class="filter-input" type="radio" id="availability-all" name="availability-filter" checked>
     <input class="filter-input" type="radio" id="availability-now" name="availability-filter">
@@ -85,7 +61,13 @@
       <label class="filter-btn" for="filter-cp">CP (Coding)</label>
       <label class="filter-btn" for="filter-physics">Physics</label>
       <label class="filter-btn" for="filter-eee">EEE</label>
-      <label class="filter-btn" for="filter-web-design">Web Design</label>
+    </div>
+
+    <div class="availability-filters">
+      <span>Availability:</span>
+      <label class="filter-btn" for="availability-all">All</label>
+      <label class="filter-btn" for="availability-now">Available now</label>
+      <label class="filter-btn" for="availability-later">Open later today</label>
     </div>
 
     <div class="faculty-search" data-search-target="#directory-faculty-grid">
@@ -109,7 +91,7 @@
           <div class="avatar">NKD</div>
           <div>
             <h3>Dr. Neeraj K. Dhanwani</h3>
-            <span class="badge dept">Maths</span>
+            <span class="badge dept">Math-I</span>
           </div>
         </div>
         <span class="badge free">● Available now</span>
@@ -150,7 +132,7 @@
           <div class="avatar">AD</div>
           <div>
             <h3>Dr. Amey S. Deshpande</h3>
-            <span class="badge dept">Maths</span>
+            <span class="badge dept">Math-I</span>
           </div>
         </div>
         <span class="badge free">● Available now</span>
@@ -371,13 +353,6 @@
           <div><h3>Dr. Ankita Gaur</h3><span class="badge dept">Physics</span></div>
         </div>
         <span class="badge busy">● In class · Open later today</span>
-        <p>👥 Queue: 0 Students</p>
-        <details>
-          <summary>View Today's Free Slots</summary>
-          <ul>
-            <li>03:00 PM - 04:30 PM</li>
-          </ul>
-        </details>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
@@ -388,12 +363,6 @@
         </div>
         <span class="badge free">● Available now</span>
         <p>👥 Queue: 0 Students</p>
-        <details>
-          <summary>View Today's Free Slots</summary>
-          <ul>
-            <li>11:00 AM - 01:00 PM</li>
-          </ul>
-        </details>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
@@ -403,29 +372,16 @@
           <div><h3>Dr. Swati Chandra</h3><span class="badge dept">English</span></div>
         </div>
         <span class="badge busy">● In class · Open later today</span>
-        <p>👥 Queue: 0 Students</p>
-        <details>
-          <summary>View Today's Free Slots</summary>
-          <ul>
-            <li>02:00 PM - 03:30 PM</li>
-          </ul>
-        </details>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
-      <div class="faculty-card available-now" data-dept="web-design" id="faculty-aanand">
+      <div class="faculty-card available-now" data-dept="cp" id="faculty-aanand">
         <div class="card-header">
           <div class="avatar">AU</div>
           <div><h3>Mr. Aanand Upadhayay</h3><span class="badge dept">Web Design</span></div>
         </div>
         <span class="badge free">● Available now</span>
         <p>👥 Queue: 0 Students</p>
-        <details>
-          <summary>View Today's Free Slots</summary>
-          <ul>
-            <li>02:00 PM - 03:30 PM</li>
-          </ul>
-        </details>
         <a href="#doubt-form" class="btn-primary">Ask Doubt / Join Queue</a>
       </div>
 
@@ -469,6 +425,7 @@
 
         <button class="btn-primary" type="submit">Submit Doubt</button>
       </form>
+      <p class="form-feedback" id="request-feedback" role="status" aria-live="polite"></p>
       <a class="btn-primary request-link" href="requests.html">View My Requests</a>
     </section>
 

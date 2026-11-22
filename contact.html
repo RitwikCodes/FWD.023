@@ -7,56 +7,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero-header">
-    <nav class="nav-bar" aria-label="Main navigation">
-      <a class="brand-mark" href="index.html">ProfLine</a>
-      <button class="nav-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-links" id="primary-navigation">
-        <a href="index.html" class="nav-link">Live Directory</a>
-        <a href="contact.html" class="nav-link active" aria-current="page">Contact Teachers</a>
-        <a href="classtopics.html" class="nav-link">Class Topics</a>
-        <a href="requests.html" class="nav-link">My Requests</a>
-        <a href="faculty.html" class="nav-link">Faculty View</a>
-      </div>
-      <div class="nav-actions">
-        <button class="theme-toggle icon-theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20.985 12.486A9 9 0 1 1 11.514 3.015a7 7 0 0 0 9.471 9.471Z" />
-          </svg>
-          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
-          </svg>
-        </button>
-        <a class="login-button" href="login.html">Login</a>
-      </div>
-    </nav>
-    <div class="hero-content">
-      <div class="live-badge">
-        <span class="live-dot" aria-hidden="true"></span>
-        <span>Live Campus Queue • Real-Time Availability</span>
-      </div>
-      <h1 class="hero-title">Faculty support, without the wait.</h1>
-      <p>Contact faculty directly through their email.</p>
-    </div>
+  <header>
+    <h1>ProfLine</h1>
+    <p>Contact faculty directly through their email.</p>
   </header>
+
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-link">Live Directory</a>
+    <a href="contact.html" class="nav-link active" aria-current="page">Contact Teachers</a>
+    <a href="classtopics.html" class="nav-link">Class Topics</a>
+    <a href="requests.html" class="nav-link">My Requests</a>
+    <a href="faculty.html" class="nav-link">Faculty View</a>
+  </nav>
 
   <main class="container">
     <h2>Contact Faculty</h2>
 
-    <input class="filter-input" type="radio" id="contact-type-teaching" name="contact-faculty-type" checked>
-    <input class="filter-input" type="radio" id="contact-type-non-teaching" name="contact-faculty-type">
-    <div class="faculty-type-switch" role="radiogroup" aria-label="Choose faculty type">
-      <label for="contact-type-teaching">Teaching Faculty</label>
-      <label for="contact-type-non-teaching">Non-Teaching Faculty</label>
-    </div>
-
-    <div class="faculty-search contact-search-teaching" data-search-target="#contact-faculty-grid">
-      <label for="contact-faculty-search">Find a teaching faculty member</label>
+    <div class="faculty-search" data-search-target="#contact-faculty-grid">
+      <label for="contact-faculty-search">Find a teacher</label>
       <input
         type="search"
         id="contact-faculty-search"
@@ -67,18 +35,6 @@
       <p class="faculty-search-status" id="contact-faculty-search-status" role="status" aria-live="polite"></p>
     </div>
 
-    <div class="faculty-search contact-search-non-teaching" data-search-target="#contact-non-teaching-grid">
-      <label for="contact-non-teaching-search">Find a non-teaching staff member</label>
-      <input
-        type="search"
-        id="contact-non-teaching-search"
-        class="faculty-search-input"
-        placeholder="Search by name, role, office, or email"
-        aria-describedby="contact-non-teaching-search-status"
-      >
-      <p class="faculty-search-status" id="contact-non-teaching-search-status" role="status" aria-live="polite"></p>
-    </div>
-
     <section class="faculty-grid" id="contact-faculty-grid">
 
       <article class="faculty-card" data-dept="maths" id="teacher-neeraj">
@@ -86,7 +42,7 @@
           <div class="avatar">NKD</div>
           <div>
             <h3>Dr. Neeraj K. Dhanwani</h3>
-            <span class="badge dept">Maths</span>
+            <span class="badge dept">Math-I</span>
           </div>
         </div>
         <p>📍 ES203</p>
@@ -110,7 +66,7 @@
           <div class="avatar">AD</div>
           <div>
             <h3>Dr. Amey S. Deshpande</h3>
-            <span class="badge dept">Maths</span>
+            <span class="badge dept">Math-I</span>
           </div>
         </div>
         <p>📍 Science Block, Room 101</p>
@@ -253,7 +209,7 @@
           <div class="avatar">SSS</div>
           <div>
             <h3>Dr. Shashank Sheshar Singh</h3>
-            <span class="badge dept">CP (Coding)</span>
+            <span class="badge dept">Computer Programming</span>
           </div>
         </div>
         <p>✉️ <a href="mailto:shashank.singh@teachers.sau.ac.in">shashank.singh@teachers.sau.ac.in</a></p>
@@ -270,7 +226,7 @@
         <p>✉️ <a href="mailto:swati.chandra@teachers.sau.ac.in">swati.chandra@teachers.sau.ac.in</a></p>
       </article>
 
-      <article class="faculty-card" data-dept="web-design" id="teacher-aanand">
+      <article class="faculty-card" data-dept="cp" id="teacher-aanand">
         <div class="card-header">
           <div class="avatar">AU</div>
           <div>
@@ -281,138 +237,6 @@
         <p>✉️ <a href="mailto:anand.upadhayay@teachers.sau.ac.in">anand.upadhayay@teachers.sau.ac.in</a></p>
       </article>
 
-    </section>
-
-    <section class="faculty-grid" id="contact-non-teaching-grid" aria-label="Non-teaching faculty">
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">PM</div>
-          <div>
-            <h3>Pranab K. Muhuri</h3>
-            <span class="badge dept">Non-Teaching Faculty</span>
-          </div>
-        </div>
-        <p>📍 Office 201 CSE</p>
-        <p>🕒 Available: 10:00 AM - 12:00 PM</p>
-        <p>✉️ <a href="mailto:pranabmuhuri@cs.sau.ac.in">pranabmuhuri@cs.sau.ac.in</a></p>
-      </article>
-
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">A</div>
-          <div>
-            <h3>Amitadev</h3>
-            <span class="badge dept">Non-Teaching Faculty</span>
-          </div>
-        </div>
-        <p>📍 Office 202 CSE</p>
-        <p>🕒 Available: 11:00 AM - 1:00 PM</p>
-        <p>✉️ <a href="mailto:amitadev@sau.int">amitadev@sau.int</a></p>
-      </article>
-
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">RR</div>
-          <div>
-            <h3>Reshma Rastogi</h3>
-            <span class="badge dept">Non-Teaching Faculty</span>
-          </div>
-        </div>
-        <p>📍 Office 203 CSE</p>
-        <p>🕒 Available: 12:00 PM - 2:00 PM</p>
-        <p>✉️ <a href="mailto:reshma.khemchandani@sau.ac.in">reshma.khemchandani@sau.ac.in</a></p>
-      </article>
-
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">AM</div>
-          <div>
-            <h3>Anshul Mathur</h3>
-            <span class="badge dept">Non-Teaching Faculty</span>
-          </div>
-        </div>
-        <p>📍 Office 204 CSE</p>
-        <p>🕒 Available: 1:00 PM - 3:00 PM</p>
-        <p>✉️ <a href="mailto:anshulmathur@sau.int">anshulmathur@sau.int</a></p>
-      </article>
-
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">AD</div>
-          <div>
-            <h3>Assistant Director FET</h3>
-            <span class="badge dept">Non-Teaching Faculty</span>
-          </div>
-        </div>
-        <p>📍 Office 205 CSE</p>
-        <p>🕒 Available: 2:00 PM - 4:00 PM</p>
-        <p>✉️ <a href="mailto:adir-fet@sau.int">adir-fet@sau.int</a></p>
-      </article>
-
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">VA</div>
-          <div>
-            <h3>Vipul Adhana</h3>
-            <span class="badge dept">IT Analyst</span>
-          </div>
-        </div>
-        <p>📍 Office 004 CSE</p>
-        <p>🕒 Available: 3:00 PM - 5:00 PM</p>
-        <p>✉️ <a href="mailto:vipul@sau.int">vipul@sau.int</a></p>
-      </article>
-
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">AJ</div>
-          <div>
-            <h3>Amit Kumar Jha</h3>
-            <span class="badge dept">Office Assistant</span>
-          </div>
-        </div>
-        <p>📍 Office 004 CSE</p>
-        <p>🕒 Available: 3:00 PM - 5:00 PM</p>
-        <p>✉️ <a href="mailto:amitkumarjha@sau.int">amitkumarjha@sau.int</a></p>
-      </article>
-
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">P</div>
-          <div>
-            <h3>Parmanand</h3>
-            <span class="badge dept">Office Assistant</span>
-          </div>
-        </div>
-        <p>📍 Office 004 CSE</p>
-        <p>🕒 Available: 3:00 PM - 5:00 PM</p>
-        <p>✉️ <a href="mailto:parmanand@sau.int">parmanand@sau.int</a></p>
-      </article>
-
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">MB</div>
-          <div>
-            <h3>Mukund Bhilwara</h3>
-            <span class="badge dept">Office Assistant</span>
-          </div>
-        </div>
-        <p>📍 Office 004 CSE</p>
-        <p>🕒 Available: 3:00 PM - 5:00 PM</p>
-        <p>✉️ <a href="mailto:mukundbhilwara@sau.int">mukundbhilwara@sau.int</a></p>
-      </article>
-
-      <article class="faculty-card">
-        <div class="card-header">
-          <div class="avatar">HG</div>
-          <div>
-            <h3>Himanshu Gangwar</h3>
-            <span class="badge dept">Labs</span>
-          </div>
-        </div>
-        <p>📍 Office 004 CSE</p>
-        <p>🕒 Available: 3:00 PM - 5:00 PM</p>
-        <p>✉️ <a href="mailto:himanshu.g@sau.int">himanshu.g@sau.int</a></p>
-      </article>
     </section>
   </main>
 
