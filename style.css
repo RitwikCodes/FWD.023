@@ -447,6 +447,56 @@ body {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
+.login-status,
+.request-submit-status,
+.request-action-status {
+  color: #166534;
+  font-weight: 650;
+}
+
+.login-status:empty,
+.request-submit-status:empty,
+.request-action-status:empty {
+  display: none;
+}
+
+.login-status.is-error,
+.request-submit-status.is-error,
+.request-action-status.is-error {
+  color: #b91c1c;
+}
+
+.request-submit-status {
+  margin-top: 12px;
+}
+
+.demo-accounts {
+  padding: 0 28px 24px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.demo-accounts h2 {
+  margin-bottom: 8px;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.demo-accounts p {
+  margin: 8px 0;
+}
+
+.demo-account-warning {
+  color: #9a3412;
+  font-size: 0.82rem;
+}
+
+.demo-accounts code {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: #eef2ff;
+}
+
 .password-field {
   position: relative;
   margin-bottom: 19px;
@@ -1132,6 +1182,66 @@ h2 {
   color: var(--muted);
 }
 
+.request-actions,
+.request-edit-panel {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.request-edit-panel {
+  width: 100%;
+  max-width: 520px;
+}
+
+.request-edit-panel[hidden] {
+  display: none;
+}
+
+.request-edit-panel label {
+  display: grid;
+  width: 100%;
+  gap: 5px;
+  font-weight: 700;
+}
+
+.request-edit-panel select,
+.request-edit-panel textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  color: var(--text);
+  font: inherit;
+}
+
+.request-action-button,
+.request-cancel-button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.request-action-button {
+  background: var(--blue);
+}
+
+.request-cancel-button {
+  background: #b91c1c;
+}
+
+.request-action-button:focus-visible,
+.request-cancel-button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.45);
+  outline-offset: 3px;
+}
+
 .request-status {
   display: inline-block;
   padding: 5px 10px;
@@ -1156,6 +1266,44 @@ h2 {
 .faculty-request-status.answered {
   background: #ede9fe;
   color: #6d28d9;
+}
+
+.request-status.cancelled,
+.faculty-request-status.cancelled {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.account-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border: 1px solid #dbe3ef;
+  border-left: 5px solid #b91c1c;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.account-status p {
+  margin: 0;
+}
+
+.account-status.is-signed-in {
+  border-left-color: var(--success);
+}
+
+.account-status .login-button {
+  flex: 0 0 auto;
+  background: var(--blue);
+  color: white;
+}
+
+.account-status .login-button:hover {
+  background: #1d4ed8;
 }
 
 .request-link {
@@ -1883,6 +2031,7 @@ body.dark-mode .faculty-card {
 body.dark-mode .doubt-form-panel,
 body.dark-mode .section-card,
 body.dark-mode .request-card,
+body.dark-mode .account-status,
 body.dark-mode .faculty-summary-card,
 body.dark-mode .faculty-storage-note,
 body.dark-mode .faculty-availability-panel,
@@ -1907,6 +2056,19 @@ body.dark-mode .faculty-storage-note {
 
 body.dark-mode .request-card {
   border-left-color: var(--blue);
+}
+
+body.dark-mode .account-status {
+  border-left-color: #f87171;
+}
+
+body.dark-mode .account-status.is-signed-in {
+  border-left-color: #4ade80;
+}
+
+body.dark-mode .account-status .login-button {
+  background: var(--blue);
+  color: white;
 }
 
 body.dark-mode .faculty-empty-state {
@@ -1946,7 +2108,9 @@ body.dark-mode .request-fields textarea,
 body.dark-mode .request-fields select,
 body.dark-mode .faculty-request-controls select,
 body.dark-mode .faculty-request-controls textarea,
-body.dark-mode .login-form input {
+body.dark-mode .login-form input,
+body.dark-mode .request-edit-panel select,
+body.dark-mode .request-edit-panel textarea {
   border-color: #475569;
   background: #0f172a;
   color: #e2e8f0;
@@ -1957,6 +2121,31 @@ body.dark-mode .request-fields input::placeholder,
 body.dark-mode .request-fields textarea::placeholder,
 body.dark-mode .login-form input::placeholder {
   color: #94a3b8;
+}
+
+body.dark-mode .demo-accounts,
+body.dark-mode .demo-accounts h2 {
+  color: #e2e8f0;
+}
+
+body.dark-mode .demo-account-warning {
+  color: #fdba74;
+}
+
+body.dark-mode .login-status,
+body.dark-mode .request-submit-status,
+body.dark-mode .request-action-status {
+  color: #86efac;
+}
+
+body.dark-mode .login-status.is-error,
+body.dark-mode .request-submit-status.is-error,
+body.dark-mode .request-action-status.is-error {
+  color: #fca5a5;
+}
+
+body.dark-mode .demo-accounts code {
+  background: #263449;
 }
 
 body.dark-mode details {

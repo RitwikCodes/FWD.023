@@ -32,16 +32,23 @@
         </div>
       </header>
 
-      <form class="login-form" action="login.html" method="get">
+      <form class="login-form" id="demo-login-form">
         <label for="login-id">ID</label>
-        <input id="login-id" type="text" autocomplete="username" placeholder="Enter your ID">
+        <input id="login-id" type="text" autocomplete="username" placeholder="Enter your ID" required>
 
         <label for="login-password">Password</label>
-        <input id="login-password" type="password" autocomplete="current-password" placeholder="Enter your password">
+        <input id="login-password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
 
         <button class="btn-primary" type="submit">Sign In</button>
+        <p class="login-status" id="login-status" role="status" aria-live="polite"></p>
         <a class="login-back-link" href="index.html">← Back to Live Directory</a>
       </form>
+      <aside class="demo-accounts" aria-label="Demo login accounts">
+        <h2>Demo accounts</h2>
+        <p><strong>Student</strong><br>ID: <code>student.demo</code><br>Password: <code>Student123!</code></p>
+        <p><strong>Teacher</strong><br>ID: <code>teacher.demo</code><br>Password: <code>Teacher123!</code></p>
+        <p class="demo-account-warning">These are public demo credentials, not secure accounts.</p>
+      </aside>
     </section>
   </main>
   <script src="script.js" defer></script>
